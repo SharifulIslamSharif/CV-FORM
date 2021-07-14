@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CVDetaisDataSet" targetNamespace="http://tempuri.org/CVDetaisDataSet.xsd" xmlns:mstns="http://tempuri.org/CVDetaisDataSet.xsd" xmlns="http://tempuri.org/CVDetaisDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CVDetaisConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CVDetaisConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp.Properties.Settings.GlobalReference.Default.CVDetaisConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CVTableAdapter" GeneratorDataComponentClassName="CVTableAdapter" Name="CV" UserDataComponentName="CVTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CVDetaisConnectionString (Settings)" DbObjectName="CVDetais.dbo.CV" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[CV] WHERE (([CvID] = @Original_CvID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@p3 = 1 AND [Father's Name] IS NULL) OR ([Father's Name] = @p2)) AND ((@p6 = 1 AND [Mother's Name] IS NULL) OR ([Mother's Name] = @p5)) AND ((@IsNull_DoB = 1 AND [DoB] IS NULL) OR ([DoB] = @Original_DoB)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Honours_Year = 1 AND [Honours Year] IS NULL) OR ([Honours Year] = @Original_Honours_Year)) AND ((@IsNull_Honours_Board = 1 AND [Honours Board] IS NULL) OR ([Honours Board] = @Original_Honours_Board)) AND ((@IsNull_Honours_Result = 1 AND [Honours Result] IS NULL) OR ([Honours Result] = @Original_Honours_Result)) AND ((@IsNull_Honours_Group = 1 AND [Honours Group] IS NULL) OR ([Honours Group] = @Original_Honours_Group)) AND ((@IsNull_Masters_Year = 1 AND [Masters Year] IS NULL) OR ([Masters Year] = @Original_Masters_Year)) AND ((@IsNull_Masters_Board = 1 AND [Masters Board] IS NULL) OR ([Masters Board] = @Original_Masters_Board)) AND ((@IsNull_Masters_Result = 1 AND [Masters Result] IS NULL) OR ([Masters Result] = @Original_Masters_Result)) AND ((@IsNull_Masters_Group = 1 AND [Masters Group] IS NULL) OR ([Masters Group] = @Original_Masters_Group)) AND ((@IsNull_Organization1 = 1 AND [Organization1] IS NULL) OR ([Organization1] = @Original_Organization1)) AND ((@IsNull_Organization1Time = 1 AND [Organization1Time] IS NULL) OR ([Organization1Time] = @Original_Organization1Time)) AND ((@IsNull_Organization2 = 1 AND [Organization2] IS NULL) OR ([Organization2] = @Original_Organization2)) AND ((@IsNull_Organization2Time = 1 AND [Organization2Time] IS NULL) OR ([Organization2Time] = @Original_Organization2Time)) AND ((@IsNull_Referee1Name = 1 AND [Referee1Name] IS NULL) OR ([Referee1Name] = @Original_Referee1Name)) AND ((@IsNull_Referee1Address = 1 AND [Referee1Address] IS NULL) OR ([Referee1Address] = @Original_Referee1Address)) AND ((@IsNull_Referee1Email = 1 AND [Referee1Email] IS NULL) OR ([Referee1Email] = @Original_Referee1Email)) AND ((@IsNull_Referee2Name = 1 AND [Referee2Name] IS NULL) OR ([Referee2Name] = @Original_Referee2Name)) AND ((@IsNull_Referee2Address = 1 AND [Referee2Address] IS NULL) OR ([Referee2Address] = @Original_Referee2Address)) AND ((@IsNull_Referee2Email = 1 AND [Referee2Email] IS NULL) OR ([Referee2Email] = @Original_Referee2Email)) AND ((@IsNull_FilePath = 1 AND [FilePath] IS NULL) OR ([FilePath] = @Original_FilePath)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CvID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CvID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Father's Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Father's Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Mother's Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mother's Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DoB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DoB" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DoB" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DoB" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Gender" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Honours_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Board" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Board" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Honours_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Board" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Result" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Result" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Honours_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Result" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Group" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Group" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Honours_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Group" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Masters_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Board" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Board" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Masters_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Board" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Result" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Result" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Masters_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Result" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Group" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Group" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Masters_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Group" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization1Time" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization1Time" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization1Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1Time" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization2Time" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization2Time" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization2Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2Time" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee1Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee1Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee1Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee1Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee1Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee1Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee1Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee1Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee1Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee2Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee2Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee2Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee2Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee2Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee2Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee2Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee2Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee2Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FilePath" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FilePath" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FilePath" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[CV] ([Name], [Father's Name], [Mother's Name], [DoB], [Gender], [Address], [Phone], [Email], [Honours Year], [Honours Board], [Honours Result], [Honours Group], [Masters Year], [Masters Board], [Masters Result], [Masters Group], [Organization1], [Organization1Time], [Organization2], [Organization2Time], [Referee1Name], [Referee1Address], [Referee1Email], [Referee2Name], [Referee2Address], [Referee2Email], [FilePath]) VALUES (@Name, @p1, @p4, @DoB, @Gender, @Address, @Phone, @Email, @Honours_Year, @Honours_Board, @Honours_Result, @Honours_Group, @Masters_Year, @Masters_Board, @Masters_Result, @Masters_Group, @Organization1, @Organization1Time, @Organization2, @Organization2Time, @Referee1Name, @Referee1Address, @Referee1Email, @Referee2Name, @Referee2Address, @Referee2Email, @FilePath);
+SELECT CvID, Name, [Father's Name], [Mother's Name], DoB, Gender, Address, Phone, Email, [Honours Year], [Honours Board], [Honours Result], [Honours Group], [Masters Year], [Masters Board], [Masters Result], [Masters Group], Organization1, Organization1Time, Organization2, Organization2Time, Referee1Name, Referee1Address, Referee1Email, Referee2Name, Referee2Address, Referee2Email, FilePath FROM CV WHERE (CvID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Father's Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mother's Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DoB" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DoB" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Honours_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Honours_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Board" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Honours_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Result" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Honours_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Masters_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Masters_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Board" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Masters_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Result" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Masters_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization1Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization2Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee1Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee1Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee1Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee2Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee2Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee2Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FilePath" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CvID, Name, [Father's Name], [Mother's Name], DoB, Gender, Address, Phone, Email, [Honours Year], [Honours Board], [Honours Result], [Honours Group], [Masters Year], [Masters Board], [Masters Result], [Masters Group], Organization1, Organization1Time, Organization2, Organization2Time, Referee1Name, Referee1Address, Referee1Email, Referee2Name, Referee2Address, Referee2Email, FilePath FROM dbo.CV</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[CV] SET [Name] = @Name, [Father's Name] = @p1, [Mother's Name] = @p4, [DoB] = @DoB, [Gender] = @Gender, [Address] = @Address, [Phone] = @Phone, [Email] = @Email, [Honours Year] = @Honours_Year, [Honours Board] = @Honours_Board, [Honours Result] = @Honours_Result, [Honours Group] = @Honours_Group, [Masters Year] = @Masters_Year, [Masters Board] = @Masters_Board, [Masters Result] = @Masters_Result, [Masters Group] = @Masters_Group, [Organization1] = @Organization1, [Organization1Time] = @Organization1Time, [Organization2] = @Organization2, [Organization2Time] = @Organization2Time, [Referee1Name] = @Referee1Name, [Referee1Address] = @Referee1Address, [Referee1Email] = @Referee1Email, [Referee2Name] = @Referee2Name, [Referee2Address] = @Referee2Address, [Referee2Email] = @Referee2Email, [FilePath] = @FilePath WHERE (([CvID] = @Original_CvID) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@p3 = 1 AND [Father's Name] IS NULL) OR ([Father's Name] = @p2)) AND ((@p6 = 1 AND [Mother's Name] IS NULL) OR ([Mother's Name] = @p5)) AND ((@IsNull_DoB = 1 AND [DoB] IS NULL) OR ([DoB] = @Original_DoB)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Honours_Year = 1 AND [Honours Year] IS NULL) OR ([Honours Year] = @Original_Honours_Year)) AND ((@IsNull_Honours_Board = 1 AND [Honours Board] IS NULL) OR ([Honours Board] = @Original_Honours_Board)) AND ((@IsNull_Honours_Result = 1 AND [Honours Result] IS NULL) OR ([Honours Result] = @Original_Honours_Result)) AND ((@IsNull_Honours_Group = 1 AND [Honours Group] IS NULL) OR ([Honours Group] = @Original_Honours_Group)) AND ((@IsNull_Masters_Year = 1 AND [Masters Year] IS NULL) OR ([Masters Year] = @Original_Masters_Year)) AND ((@IsNull_Masters_Board = 1 AND [Masters Board] IS NULL) OR ([Masters Board] = @Original_Masters_Board)) AND ((@IsNull_Masters_Result = 1 AND [Masters Result] IS NULL) OR ([Masters Result] = @Original_Masters_Result)) AND ((@IsNull_Masters_Group = 1 AND [Masters Group] IS NULL) OR ([Masters Group] = @Original_Masters_Group)) AND ((@IsNull_Organization1 = 1 AND [Organization1] IS NULL) OR ([Organization1] = @Original_Organization1)) AND ((@IsNull_Organization1Time = 1 AND [Organization1Time] IS NULL) OR ([Organization1Time] = @Original_Organization1Time)) AND ((@IsNull_Organization2 = 1 AND [Organization2] IS NULL) OR ([Organization2] = @Original_Organization2)) AND ((@IsNull_Organization2Time = 1 AND [Organization2Time] IS NULL) OR ([Organization2Time] = @Original_Organization2Time)) AND ((@IsNull_Referee1Name = 1 AND [Referee1Name] IS NULL) OR ([Referee1Name] = @Original_Referee1Name)) AND ((@IsNull_Referee1Address = 1 AND [Referee1Address] IS NULL) OR ([Referee1Address] = @Original_Referee1Address)) AND ((@IsNull_Referee1Email = 1 AND [Referee1Email] IS NULL) OR ([Referee1Email] = @Original_Referee1Email)) AND ((@IsNull_Referee2Name = 1 AND [Referee2Name] IS NULL) OR ([Referee2Name] = @Original_Referee2Name)) AND ((@IsNull_Referee2Address = 1 AND [Referee2Address] IS NULL) OR ([Referee2Address] = @Original_Referee2Address)) AND ((@IsNull_Referee2Email = 1 AND [Referee2Email] IS NULL) OR ([Referee2Email] = @Original_Referee2Email)) AND ((@IsNull_FilePath = 1 AND [FilePath] IS NULL) OR ([FilePath] = @Original_FilePath)));
+SELECT CvID, Name, [Father's Name], [Mother's Name], DoB, Gender, Address, Phone, Email, [Honours Year], [Honours Board], [Honours Result], [Honours Group], [Masters Year], [Masters Board], [Masters Result], [Masters Group], Organization1, Organization1Time, Organization2, Organization2Time, Referee1Name, Referee1Address, Referee1Email, Referee2Name, Referee2Address, Referee2Email, FilePath FROM CV WHERE (CvID = @CvID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Father's Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mother's Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DoB" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DoB" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Honours_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Honours_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Board" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Honours_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Result" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Honours_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Masters_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Masters_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Board" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Masters_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Result" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Masters_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization1Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Organization2Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2Time" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee1Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee1Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee1Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee2Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee2Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Referee2Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FilePath" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CvID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CvID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Father's Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Father's Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Mother's Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Mother's Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DoB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DoB" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DoB" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DoB" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Gender" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Gender" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Phone" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Phone" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Phone" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Email" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Honours_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Board" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Board" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Honours_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Board" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Result" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Result" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Honours_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Honours Result" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Honours_Group" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Honours Group" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Honours_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Honours Group" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Masters_Year" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Board" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Board" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Masters_Board" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Board" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Result" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Result" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Masters_Result" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Masters Result" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Masters_Group" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Masters Group" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Masters_Group" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Masters Group" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization1" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization1" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization1Time" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization1Time" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization1Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization1Time" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization2" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization2" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Organization2Time" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Organization2Time" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Organization2Time" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Organization2Time" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee1Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee1Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee1Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee1Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee1Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee1Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee1Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee1Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee1Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee1Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee2Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee2Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee2Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee2Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee2Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee2Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Referee2Email" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Referee2Email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Referee2Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Referee2Email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FilePath" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FilePath" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FilePath" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FilePath" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CvID" ColumnName="CvID" DataSourceName="CVDetais.dbo.CV" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CvID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CvID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CvID" DataSetColumn="CvID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Father's Name" DataSetColumn="Father's Name" />
+              <Mapping SourceColumn="Mother's Name" DataSetColumn="Mother's Name" />
+              <Mapping SourceColumn="DoB" DataSetColumn="DoB" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="Phone" DataSetColumn="Phone" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Honours Year" DataSetColumn="Honours Year" />
+              <Mapping SourceColumn="Honours Board" DataSetColumn="Honours Board" />
+              <Mapping SourceColumn="Honours Result" DataSetColumn="Honours Result" />
+              <Mapping SourceColumn="Honours Group" DataSetColumn="Honours Group" />
+              <Mapping SourceColumn="Masters Year" DataSetColumn="Masters Year" />
+              <Mapping SourceColumn="Masters Board" DataSetColumn="Masters Board" />
+              <Mapping SourceColumn="Masters Result" DataSetColumn="Masters Result" />
+              <Mapping SourceColumn="Masters Group" DataSetColumn="Masters Group" />
+              <Mapping SourceColumn="Organization1" DataSetColumn="Organization1" />
+              <Mapping SourceColumn="Organization1Time" DataSetColumn="Organization1Time" />
+              <Mapping SourceColumn="Organization2" DataSetColumn="Organization2" />
+              <Mapping SourceColumn="Organization2Time" DataSetColumn="Organization2Time" />
+              <Mapping SourceColumn="Referee1Name" DataSetColumn="Referee1Name" />
+              <Mapping SourceColumn="Referee1Address" DataSetColumn="Referee1Address" />
+              <Mapping SourceColumn="Referee1Email" DataSetColumn="Referee1Email" />
+              <Mapping SourceColumn="Referee2Name" DataSetColumn="Referee2Name" />
+              <Mapping SourceColumn="Referee2Address" DataSetColumn="Referee2Address" />
+              <Mapping SourceColumn="Referee2Email" DataSetColumn="Referee2Email" />
+              <Mapping SourceColumn="FilePath" DataSetColumn="FilePath" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CVDetaisDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CVDetaisDataSet" msprop:Generator_UserDSName="CVDetaisDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CV" msprop:Generator_TableClassName="CVDataTable" msprop:Generator_TableVarName="tableCV" msprop:Generator_TablePropName="CV" msprop:Generator_RowDeletingName="CVRowDeleting" msprop:Generator_RowChangingName="CVRowChanging" msprop:Generator_RowEvHandlerName="CVRowChangeEventHandler" msprop:Generator_RowDeletedName="CVRowDeleted" msprop:Generator_UserTableName="CV" msprop:Generator_RowChangedName="CVRowChanged" msprop:Generator_RowEvArgName="CVRowChangeEvent" msprop:Generator_RowClassName="CVRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CvID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCvID" msprop:Generator_ColumnPropNameInRow="CvID" msprop:Generator_ColumnPropNameInTable="CvIDColumn" msprop:Generator_UserColumnName="CvID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Father_x0027_s_x0020_Name" msprop:Generator_ColumnVarNameInTable="_columnFather_s_Name" msprop:Generator_ColumnPropNameInRow="_Father_s_Name" msprop:Generator_ColumnPropNameInTable="_Father_s_NameColumn" msprop:Generator_UserColumnName="Father's Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mother_x0027_s_x0020_Name" msprop:Generator_ColumnVarNameInTable="_columnMother_s_Name" msprop:Generator_ColumnPropNameInRow="_Mother_s_Name" msprop:Generator_ColumnPropNameInTable="_Mother_s_NameColumn" msprop:Generator_UserColumnName="Mother's Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DoB" msprop:Generator_ColumnVarNameInTable="columnDoB" msprop:Generator_ColumnPropNameInRow="DoB" msprop:Generator_ColumnPropNameInTable="DoBColumn" msprop:Generator_UserColumnName="DoB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone" msprop:Generator_ColumnVarNameInTable="columnPhone" msprop:Generator_ColumnPropNameInRow="Phone" msprop:Generator_ColumnPropNameInTable="PhoneColumn" msprop:Generator_UserColumnName="Phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Honours_x0020_Year" msprop:Generator_ColumnVarNameInTable="columnHonours_Year" msprop:Generator_ColumnPropNameInRow="Honours_Year" msprop:Generator_ColumnPropNameInTable="Honours_YearColumn" msprop:Generator_UserColumnName="Honours Year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Honours_x0020_Board" msprop:Generator_ColumnVarNameInTable="columnHonours_Board" msprop:Generator_ColumnPropNameInRow="Honours_Board" msprop:Generator_ColumnPropNameInTable="Honours_BoardColumn" msprop:Generator_UserColumnName="Honours Board" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Honours_x0020_Result" msprop:Generator_ColumnVarNameInTable="columnHonours_Result" msprop:Generator_ColumnPropNameInRow="Honours_Result" msprop:Generator_ColumnPropNameInTable="Honours_ResultColumn" msprop:Generator_UserColumnName="Honours Result" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Honours_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnHonours_Group" msprop:Generator_ColumnPropNameInRow="Honours_Group" msprop:Generator_ColumnPropNameInTable="Honours_GroupColumn" msprop:Generator_UserColumnName="Honours Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Masters_x0020_Year" msprop:Generator_ColumnVarNameInTable="columnMasters_Year" msprop:Generator_ColumnPropNameInRow="Masters_Year" msprop:Generator_ColumnPropNameInTable="Masters_YearColumn" msprop:Generator_UserColumnName="Masters Year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Masters_x0020_Board" msprop:Generator_ColumnVarNameInTable="columnMasters_Board" msprop:Generator_ColumnPropNameInRow="Masters_Board" msprop:Generator_ColumnPropNameInTable="Masters_BoardColumn" msprop:Generator_UserColumnName="Masters Board" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Masters_x0020_Result" msprop:Generator_ColumnVarNameInTable="columnMasters_Result" msprop:Generator_ColumnPropNameInRow="Masters_Result" msprop:Generator_ColumnPropNameInTable="Masters_ResultColumn" msprop:Generator_UserColumnName="Masters Result" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Masters_x0020_Group" msprop:Generator_ColumnVarNameInTable="columnMasters_Group" msprop:Generator_ColumnPropNameInRow="Masters_Group" msprop:Generator_ColumnPropNameInTable="Masters_GroupColumn" msprop:Generator_UserColumnName="Masters Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Organization1" msprop:Generator_ColumnVarNameInTable="columnOrganization1" msprop:Generator_ColumnPropNameInRow="Organization1" msprop:Generator_ColumnPropNameInTable="Organization1Column" msprop:Generator_UserColumnName="Organization1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Organization1Time" msprop:Generator_ColumnVarNameInTable="columnOrganization1Time" msprop:Generator_ColumnPropNameInRow="Organization1Time" msprop:Generator_ColumnPropNameInTable="Organization1TimeColumn" msprop:Generator_UserColumnName="Organization1Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Organization2" msprop:Generator_ColumnVarNameInTable="columnOrganization2" msprop:Generator_ColumnPropNameInRow="Organization2" msprop:Generator_ColumnPropNameInTable="Organization2Column" msprop:Generator_UserColumnName="Organization2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Organization2Time" msprop:Generator_ColumnVarNameInTable="columnOrganization2Time" msprop:Generator_ColumnPropNameInRow="Organization2Time" msprop:Generator_ColumnPropNameInTable="Organization2TimeColumn" msprop:Generator_UserColumnName="Organization2Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referee1Name" msprop:Generator_ColumnVarNameInTable="columnReferee1Name" msprop:Generator_ColumnPropNameInRow="Referee1Name" msprop:Generator_ColumnPropNameInTable="Referee1NameColumn" msprop:Generator_UserColumnName="Referee1Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referee1Address" msprop:Generator_ColumnVarNameInTable="columnReferee1Address" msprop:Generator_ColumnPropNameInRow="Referee1Address" msprop:Generator_ColumnPropNameInTable="Referee1AddressColumn" msprop:Generator_UserColumnName="Referee1Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referee1Email" msprop:Generator_ColumnVarNameInTable="columnReferee1Email" msprop:Generator_ColumnPropNameInRow="Referee1Email" msprop:Generator_ColumnPropNameInTable="Referee1EmailColumn" msprop:Generator_UserColumnName="Referee1Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referee2Name" msprop:Generator_ColumnVarNameInTable="columnReferee2Name" msprop:Generator_ColumnPropNameInRow="Referee2Name" msprop:Generator_ColumnPropNameInTable="Referee2NameColumn" msprop:Generator_UserColumnName="Referee2Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referee2Address" msprop:Generator_ColumnVarNameInTable="columnReferee2Address" msprop:Generator_ColumnPropNameInRow="Referee2Address" msprop:Generator_ColumnPropNameInTable="Referee2AddressColumn" msprop:Generator_UserColumnName="Referee2Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referee2Email" msprop:Generator_ColumnVarNameInTable="columnReferee2Email" msprop:Generator_ColumnPropNameInRow="Referee2Email" msprop:Generator_ColumnPropNameInTable="Referee2EmailColumn" msprop:Generator_UserColumnName="Referee2Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FilePath" msprop:Generator_ColumnVarNameInTable="columnFilePath" msprop:Generator_ColumnPropNameInRow="FilePath" msprop:Generator_ColumnPropNameInTable="FilePathColumn" msprop:Generator_UserColumnName="FilePath" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CV" />
+      <xs:field xpath="mstns:CvID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
